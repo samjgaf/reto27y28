@@ -1,0 +1,27 @@
+<h1 class="text-center">Reto 27 y 28</h1>
+<section class="container">
+<p>Ingresar numero1: <input [(ngModel)]="num1" type="number"></p>
+<p>Ingresar numero2: <input [(ngModel)]="num2" type="number"></p>
+<img src="https://img.europapress.es/fotoweb/fotonoticia_20150217173510_1200.jpg" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; opacity: 0.75;">
+        <p>
+            <select class="form-select form-select-lg mb-3" aria-label="form-select-lg" class="text-center" [(ngModel)]="op" >
+            <option value="ninguno" class="text-center">Seleccionar Operacion matematica</option>
+            <option value="sum" 
+            >Sumar numeros</option>
+            <option value="rest" 
+            >Restar numeros</option>
+            <option value="multi" 
+            >Multiplicar numeros</option>
+            <option value="div"
+            >Dividir numeros</option>
+            </select>
+        </p>
+        <p>Mostrar Resultado</p>
+        <span [ngSwitch]="op">
+        <span *ngSwitchCase="'sum'" >{{num1}} + {{num2}} = {{num1 + num2}}</span>
+        <span *ngSwitchCase="'rest'" >{{num1}} - {{num2}} = {{num1 - num2}}</span>
+        <span *ngSwitchCase="'multi'" >{{num1}} * {{num2}} = {{num1 * num2}}</span>
+        <span *ngSwitchCase="'div'" >{{num1}} / {{num2}} = {{num1 / num2}}</span>
+        <span *ngSwitchDefault>Resultado: No eligio operación</span>
+        </span>
+</section>

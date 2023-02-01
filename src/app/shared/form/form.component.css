@@ -1,0 +1,18 @@
+.container{
+  max-width: 20rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  background-color: #29935ec8;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: 400px;
+  
+}
+
+h1 {
+  text-align: center;
+
+  color: rgb(255, 255, 255);
+
+}
+
